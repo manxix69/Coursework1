@@ -34,6 +34,6 @@ public class Employee {
     }
 
     public void setSalary(double salary) {
-        this.salary = salary;
+        this.salary = (double)((int)(salary * 100.0)) / 100.0;
     }
 }
