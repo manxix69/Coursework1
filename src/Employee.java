@@ -6,11 +6,11 @@ public class Employee {
     private double salary;
 
     public Employee(String fullName, int department, double salary) {
-        ++counterEmployee;
+        counterEmployee++;
         this.id = counterEmployee;
         this.fullName = fullName;
         this.department = department;
-        this.salary = (double)((int)(salary * 100.0)) / 100.0;
+        this.salary = ((int)(salary * 100.0)) / 100.0;
     }
 
     public int getId() {
@@ -34,6 +34,16 @@ public class Employee {
     }
 
     public void setSalary(double salary) {
-        this.salary = (double)((int)(salary * 100.0)) / 100.0;
+        this.salary = ((int)(salary * 100.0)) / 100.0;
+    }
+
+    @Override
+    public String toString() {
+        return "Сотрудник{" +
+                "id=" + id +
+                ", ФИО='" + fullName + '\'' +
+                ", отдел=" + department +
+                ", ЗП=" + salary +
+                '}';
     }
 }
